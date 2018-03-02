@@ -1,19 +1,4 @@
 {
-  "name": "projektil",
-  "version": "0.1",
-  "author": "shatko <ms@projektil.com>",
-  "homepage": "https://projektil.com",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/shatko/projektil-gulp-compiler.git"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
   "devDependencies": {
     "gulp": "latest",
     "gulp-util": "latest",
