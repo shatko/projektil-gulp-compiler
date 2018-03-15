@@ -78,56 +78,23 @@
 
   <div class="container-outer">
     <div class="container">
-      <h1>Isotope Search + Checkboxes + Dropdown + Buttons</h1>
-
-      <p><input type="text" id="quicksearch" placeholder="Search" /></p>
-
-      <div id="form-ui">
-        <p>
-          <label>
-            <input type="checkbox" value=".metal"/>metal
-          </label>
-          <label>
-            <input type="checkbox" value=".transition"/>transition
-          </label>
-          <label>
-            <input type="checkbox" value=".alkali, .alkaline-earth"/>alkali and alkaline-earth
-          </label>
-          <label>
-            <input type="checkbox" value=":not(.transition)"/>not transition
-          </label>
-          <label>
-            <input type="checkbox" value=".metal:not(.transition)"/>metal but not transition
-          </label>
-        </p>
-      </div>
 
 
-      <select id="filters-2">
-        <option  value="*">show all</option>
-        <option value=".metal">metal</option>
-        <option value=".transition">transition</option>
-        <option value=".alkali, .alkaline-earth">alkali and alkaline-earth</option>
-        <option value=":not(.transition)">not transition</option>
-        <option value=".metal:not(.transition)">metal but not transition</option>
-      </select>
+
 
 
       <div id="filters" class="button-group">
-        <button class="button is-checked" data-filter="*">show all</button>
-        <button class="button" data-filter=".metal">metal</button>
-        <button class="button" data-filter=".transition">transition</button>
-        <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
-        <button class="button" data-filter=":not(.transition)">not transition</button>
-        <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
+        <button class="button is-checked" data-filter="*">Alle</button>
+        <button class="button" data-filter=".metal, .1880">1880 - 1899</button>
+        <button class="button" data-filter=".transition">1900 - 1939</button>
+        <button class="button" data-filter=".alkali, .alkaline-earth">1940 - 1989</button>
+        <button class="button" data-filter=":not(.transition)">1990 - 1999</button>
+        <button class="button" data-filter=".metal:not(.transition)">2000 - 2018</button>
       </div>
 
       <div class="grid">
         <div class="element-item transition metal " data-category="transition">
-          <h3 class="name">Mercury</h3>
-          <p class="symbol">Hg</p>
-          <p class="number">80</p>
-          <p class="weight">200.59</p>
+          <h3 class="name">1880</h3>
         </div>
         <div class="element-item metalloid " data-category="metalloid">
           <h3 class="name">Tellurium</h3>

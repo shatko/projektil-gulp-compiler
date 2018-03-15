@@ -51,8 +51,55 @@ $( window ).resize(function() {
 
 
 // history Isotope
-$('.grid').isotope({
-  // options
-  itemSelector: '.grid-item',
-  layoutMode: 'fitRows'
+
+// quick search regex
+var qsRegex;
+var buttonFilter;
+var filterValue;
+var $selects = $('#form-ui select');
+var $checkboxes = $('#form-ui input');
+var filterCheckbox;
+
+
+
+// init Isotope
+var $grid = $('.grid').isotope({
+  itemSelector: '.element-item',
+  filter: function() {
+    var $this = $(this);
+    var buttonResult = buttonFilter ? $this.is(buttonFilter) : true;
+    var selectResult = filterValue ? $this.is(filterValue) : true;
+    return buttonResult && selectResult;
+  }
 });
+
+// BBUTTONS
+$('#filters').on( 'click', 'button', function() {
+  buttonFilter = $( this ).attr('data-filter');
+  console.log(buttonFilter);
+  $grid.isotope();
+});
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
+
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    setTimeout( delayed, threshold || 100 );
+  };
+}
