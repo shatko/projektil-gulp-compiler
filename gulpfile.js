@@ -28,4 +28,7 @@ gulp.task('sass', ['app_scss'], function() {
 // Adds gulp watch tasks
 gulp.task('watch', function () {
     gulp.watch('styles/*.scss', ['sass']);
+    gulp.watch('styles/common/*.scss', ['sass']);
+    gulp.watch('styles/components/*.scss', ['sass']);
+    gulp.watch('styles/layouts/*.scss', ['sass']);
 });

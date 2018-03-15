@@ -1,0 +1,12 @@
+a {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $font-color-primary;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  line-height: 22px;
+  text-decoration: none;
+  &:hover {
+    color: $font-color-primary;
+    text-decoration: none;
+  }
+}

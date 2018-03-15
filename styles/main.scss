@@ -1,5 +1,13 @@
-$font-color: red;
+// Common
+@import "common/variables.scss";
+@import "common/global.scss";
 
+// Components
+@import "components/typography.scss";
+@import "components/buttons.scss";
+@import "components/slider.scss";
 
-@import "main2.scss";
-@import "main3.scss";
+// Layouts
+@import "layouts/footer.scss";
+@import "layouts/header.scss";
+@import "layouts/pages.scss";

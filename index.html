@@ -1,31 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <title>Projektil</title>
-  <meta name="description" content="convert sass to css">
+  <meta name="description" content="bare to the bone layout">
   <meta name="author" content="shatko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro:300,400" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="gulp-compiled/css/main.css">
-
 </head>
 
 <body>
 
-  <div class="container">
+  <header>
+    <div class="container-outer">
+      <a class="logo" href="#"></a>
+      <div class="hamburger">
+        <span class="line">
+          <span></span><span></span>
+        </span>
+        <span class="line">
+          <span></span><span></span>
+        </span>
+        <span class="line">
+          <span></span><span></span>
+        </span>
+      </div>
+      <div class="navigation mobile-nav-invisible">
+        <div class="mobile-x"></div>
+        <nav class="meta-nav">
+          <ul>
+            <li>
+              <a href="#">Start</a>
+            </li>
+            <li>
+              <a href="#">Presse</a>
+            </li>
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
+            <li>
+              <a href="#">de</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="#">Verantwortung</a>
+            </li>
+            <li>
+              <a href="#">Kunden</a>
+            </li>
+            <li>
+              <a href="#">Mitarbeiter</a>
+            </li>
+            <li>
+              <a href="#">Karriere</a>
+            </li>
+            <li>
+              <a href="#">Philosophie</a>
+            </li>
+            <li>
+              <a href="#">Geschichte</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="slider-container">
+    <img src="images/slider-image-01.jpg" alt="">
+    <img src="images/slider-image-01.jpg" alt="">
+    <img src="images/slider-image-01.jpg" alt="">
+    <img src="images/slider-image-01.jpg" alt="">
+  </div>
+
+  <div class="accordion-wrapper container-outer">
+    <div class="container">
       <div class="row">
-        <div class="test-div">
-          <h1>The Title</h1>
-          <br>
-          <p>Get down get down ipsum dolor sit amizzle, phat adipiscing boofron. Nullam sapizzle velizzle, da bomb mammasay mammasa mamma oo sa, suscipizzle , gravida vel, gangster. Pellentesque shiznit crazy. Sed eros. Owned izzle dolizzle brizzle turpizzle tempizzle shiznit. Maurizzle shizzle my nizzle crocodizzle nibh yippiyo turpizzle. Yo izzle tortor. Pellentesque eleifend rhoncizzle check out this. In tellivizzle habitasse platea dictumst. Nizzle dapibizzle. Boofron tellus urna, pretizzle fo shizzle, pot, eleifend vitae, nunc. Get down get down pot. Integizzle semper velizzle sizzle gangster.</p>
+        <div class="accordion-single col-md-4">
+          <p>Schubert & Salzer Control Systems</p>
+          <h2>Ventiltechnologie</h2>
+          <p>Produkte von Schubert & Salzer Control Systems finden Sie heute in den unterschiedlichsten Bereichen der Prozessindustrie – überall, wo fließende und strömende Medien geregelt werden müssen.</p>
+          <button class="green-button" type="button" name="button">Zur Unternehmenswebsite</button>
+        </div>
+        <div class="accordion-single col-md-4">
+          <p>Schubert & Salzer Control Systems</p>
+          <h2>Ventiltechnologie</h2>
+          <p>Produkte von Schubert & Salzer Control Systems finden Sie heute in den unterschiedlichsten Bereichen der Prozessindustrie – überall, wo fließende und strömende Medien geregelt werden müssen.</p>
+          <button class="green-button" type="button" name="button">Zur Unternehmenswebsite</button>
+        </div>
+        <div class="accordion-single col-md-4">
+          <p>Schubert & Salzer Control Systems</p>
+          <h2>Ventiltechnologie</h2>
+          <p>Produkte von Schubert & Salzer Control Systems finden Sie heute in den unterschiedlichsten Bereichen der Prozessindustrie – überall, wo fließende und strömende Medien geregelt werden müssen.</p>
+          <button class="green-button" type="button" name="button">Zur Unternehmenswebsite</button>
         </div>
       </div>
+    </div>
   </div>
+
+  <footer>
+    <div class="container-outer">
+      <address class="footer-address">
+        <div class="footer-logo"></div>
+        <p>Schubert & Salzer GmbH</p>
+        <p>Bunsenstraße 38</p>
+        <p>85053 Ingolstadt</p>
+        <a href="#">Tel. 49 841 965 30</a>
+        <a href="#">info@schubert-salzer.com</a>
+      </address>
+      <nav class="footer-nav">
+        <ul>
+          <li>
+            <a href="#">impressum</a>
+          </li>
+          <li>
+            <a href="#">Datenschutz</a>
+          </li>
+          <li>
+            <a href="#">© 2018</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 
 </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="scripts/slick.min.js"></script>
+  <script src="scripts/main.js"></script>
 
 </html>

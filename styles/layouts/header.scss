@@ -1,0 +1,329 @@
+header {
+  height: auto;
+  .container-outer {
+    display: flex;
+    align-items: center;
+    height: 130px;
+    @media( max-width: 1200px ) {
+      height: 100px;
+    }
+    .logo {
+      background-image: url("../../images/logo.svg");
+      width: 220px;
+      height: 66px;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
+      float: left;
+      margin-right: auto;
+      @media( max-width: 1200px ) {
+        width: 200px;
+        height: 60px;
+      }
+    }
+    .hamburger {
+      width: 30px;
+      height: 18px;
+      margin-left: auto;
+      position: relative;
+      overflow-x: hidden;
+      cursor: pointer;
+      @media( min-width: 1024px ) {
+        display: none;
+      }
+      .line {
+        display: block;
+        height: 2px;
+        width: 30px;
+        opacity: 1;
+        left: 0;
+        position: relative;
+        &:nth-child(1) {
+          top: 0px;
+          transition: .75s ease-in-out;
+        }
+        &:nth-child(2) {
+          top: 6px;
+          transition: .75s ease-in-out .37s;
+        }
+        &:nth-child(3) {
+          top: 12px;
+          transition: .75s ease-in-out .75s;
+        }
+        span {
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background-color: $background-secondary;
+          border-radius: 9px;
+          &:first-child {
+              transform: translate(-45px, 0);
+          }
+          &:last-child {
+              transform: translate(0, 0);
+          }
+        }
+      }
+      &:hover {
+        .line {
+          transform: translate(45px, 0);
+        }
+      }
+    }
+
+    .mobile-nav-visible {
+      @media( max-width: 1023px ) {
+        opacity: 0.95!important;
+        transition: .75s ease-in-out;
+        pointer-events: all!important;
+        .mobile-x {
+          opacity: 1!important;
+        }
+        .main-nav {
+          ul {
+            li:nth-child(1) {
+              opacity: 1;
+              transition: .75s ease-in-out .2s;
+            }
+            li:nth-child(2) {
+              opacity: 1;
+              transition: .75s ease-in-out .3s;
+            }
+            li:nth-child(3) {
+              opacity: 1;
+              transition: .75s ease-in-out .4s;
+            }
+            li:nth-child(4) {
+              opacity: 1;
+              transition: .75s ease-in-out .5s;
+            }
+            li:nth-child(5) {
+              opacity: 1;
+              transition: .75s ease-in-out .6s;
+            }
+            li:nth-child(6) {
+              opacity: 1;
+              transition: .75s ease-in-out .7s;
+            }
+          }
+        }
+        .meta-nav {
+          ul {
+            li:nth-child(1) {
+              opacity: 1;
+              transition: .75s ease-in-out .8s;
+            }
+            li:nth-child(2) {
+              opacity: 1;
+              transition: .75s ease-in-out .9s;
+            }
+            li:nth-child(3) {
+              opacity: 1;
+              transition: .75s ease-in-out 1s;
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-nav-invisible {
+      @media( max-width: 1023px ) {
+        opacity: 0!important;
+        pointer-events: none!important;
+        transition: .75s ease-in-out 1.2s;
+        .mobile-x {
+          opacity: 0!important;
+          transition: .75s ease-in-out 1.2s!important;
+        }
+        .main-nav {
+          ul {
+            li:nth-child(1) {
+              opacity: 0;
+              transition: .75s ease-in-out 1s;
+            }
+            li:nth-child(2) {
+              opacity: 0;
+              transition: .75s ease-in-out .9s;
+            }
+            li:nth-child(3) {
+              opacity: 0;
+              transition: .75s ease-in-out .8s;
+            }
+            li:nth-child(4) {
+              opacity: 0;
+              transition: .75s ease-in-out .7s;
+            }
+            li:nth-child(5) {
+              opacity: 0;
+              transition: .75s ease-in-out .6s;
+            }
+            li:nth-child(6) {
+              opacity: 0;
+              transition: .75s ease-in-out .5s;
+            }
+          }
+        }
+        .meta-nav {
+          ul {
+            li:nth-child(1) {
+              opacity: 0;
+              transition: .75s ease-in-out .4s;
+            }
+            li:nth-child(2) {
+              opacity: 0;
+              transition: .75s ease-in-out .3s;
+            }
+            li:nth-child(3) {
+              opacity: 0;
+              transition: .75s ease-in-out .2s;
+            }
+          }
+        }
+      }
+    }
+
+
+    .navigation {
+      margin-left: auto;
+      display: -webkit-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @media( max-width: 1023px ) {
+        pointer-events: none;
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        background: $background-primary;
+        align-items: center;
+        position: fixed;
+      }
+      .mobile-x {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 41px;
+        right: 47px;
+        background-image: url("../../images/mobile-x.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .25s ease-in-out;
+        opacity: 0;
+        cursor: pointer;
+        &:hover {
+          transform: rotate(90deg);
+        }
+        @media( min-width: 1024px ) {
+          display: none;
+        }
+      }
+      nav {
+        @media( max-width: 1023px ) {
+          &:last-child {
+            margin-top: 80px;
+            border-bottom: 2px solid rgba(102,102,102,0.1);
+          }
+        }
+        ul {
+          padding-left: 0;
+          list-style-type: none;
+          text-align: right;
+          @media( max-width: 1023px ) {
+            text-align: center;
+          }
+          li {
+            display: inline-block;
+            @media( max-width: 1023px ) {
+              opacity: 0;
+              display: block;
+              margin: 20px 0;
+            }
+          }
+        }
+      }
+      .meta-nav {
+        @media( max-width: 1023px ) {
+          order: 2;
+        }
+        ul {
+          li {
+            a {
+              font-size: 14px;
+              margin-left: 30px;
+              text-transform: uppercase;
+              @media( max-width: 1200px ) {
+                font-size: 13px;
+                margin-left: 20px;
+              }
+              @media( max-width: 1023px ) {
+                margin-left: 0;
+                font-size: 20px;
+              }
+            }
+            &:first-child {
+              a {
+                margin-left: 0;
+              }
+            }
+            &:last-child {
+              a {
+                position: relative;
+                margin-left: 50px;
+                @media( max-width: 1200px ) {
+                  margin-left: 40px;
+                }
+                &:before {
+                  content: "";
+                  height: 15px;
+                  width: 15px;
+                  background-image: url("../../images/language-world-logo.svg");
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  display: inline-block;
+                  position: absolute;
+                  left: -20px;
+                  bottom: 2px;
+                  @media( max-width: 1200px ) {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .main-nav {
+        @media( max-width: 1023px ) {
+          order: 1;
+        }
+        ul {
+          margin-top: 5px;
+          li {
+            a {
+              font-size: 17px;
+              margin-left: 45px;
+              text-transform: uppercase;
+              @media( max-width: 1200px ) {
+                font-size: 16px;
+                margin-left: 30px;
+              }
+              @media( max-width: 1023px ) {
+                margin-left: 0;
+                font-size: 20px;
+              }
+            }
+            &:first-child {
+              a {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-16661.045 -24446.199 64.311 203.707">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        filter: url(#Pfad_79671);
+      }
+    </style>
+    <filter id="Pfad_79671" x="-16661.045" y="-24446.199" width="64.311" height="203.707" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="Pfad_79671-2" data-name="Pfad 79671" class="cls-1" d="M-16850-23677l-39.307-90.377,38.922-88.93" transform="translate(238.81 -579.69)"/>
+  </g>
+</svg>
