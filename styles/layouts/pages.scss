@@ -1,6 +1,112 @@
-.accordion-wrapper {
-  .accordion-single {
-    border: 1px solid red;
-    min-height: 300px;
+.firmengruppe {
+  height: 100%;
+  padding: 80px 0;
+  max-width: inherit;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzcwNzA3MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3MDcwNzAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgba(112,112,112,.05) 0%, rgba(255,255,255,1) 28%, rgba(112,112,112,.2) 100%); /* FF3.6-15 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(112,112,112,.05)), color-stop(28%,rgba(255,255,255,1)), color-stop(100%,rgba(112,112,112,.2))); /* Chrome4-9,Safari4-5 */
+  background: -webkit-linear-gradient(top, rgba(112,112,112,.05) 0%,rgba(255,255,255,1) 28%,rgba(112,112,112,.2) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -o-linear-gradient(top, rgba(112,112,112,.05) 0%,rgba(255,255,255,1) 28%,rgba(112,112,112,.2) 100%); /* Opera 11.10-11.50 */
+  background: -ms-linear-gradient(top, rgba(112,112,112,.05) 0%,rgba(255,255,255,1) 28%,rgba(112,112,112,.2) 100%); /* IE10 preview */
+  background: linear-gradient(to bottom, rgba(112,112,112,.05) 0%,rgba(255,255,255,1) 28%,rgba(112,112,112,.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#707070', endColorstr='#707070',GradientType=0 ); /* IE6-8 */
+  .container {
+    .world {
+      height: 270px;
+      width: 100%;
+      background-image: url("../../images/world.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      display: inline-block;
+    }
+    .world-slider {
+      text-align: center;
+      position: relative;
+      top: -50px;
+      margin-bottom: -50px;
+      overflow: hidden;
+      @media (min-width: 576px) {
+        margin-left: 70px;
+      }
+      .slide {
+        display: inline-block;
+        margin: 0 30px;
+        .number {
+          font-family: 'Raleway', sans-serif;
+          color: $font-color-quaternary;
+          font-size: 40px;
+          letter-spacing: 0;
+          line-height: 50px;
+          display: block;
+          margin: 0 auto 20px;
+        }
+        .line {
+          height: 1px;
+          width: 60px;
+          background-color: $border-teritary;
+          display: block;
+          margin: 0 auto;
+        }
+        p {
+          margin-top: 20px;
+          color: $font-color-tertiary;
+        }
+      }
+      .slick-arrow {
+        border: none;
+        position: absolute;
+        z-index: 1;
+        width: 100px;
+        height: 100%;
+        background-color: inherit;
+        padding: 0;
+        cursor: pointer;
+      }
+      .slick-prev {
+        left: 0;
+        top: 0;
+        background-image: url("../../images/slider-arrow-green.svg");
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+        background-position: 30% 50%;
+        display: inline-block;
+        position: absolute;
+      }
+      .slick-next {
+        right: 0;
+        top: 0;
+        transform: rotate(180deg);
+        background-image: url("../../images/slider-arrow-green.svg");
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+        background-position: 30% 50%;
+        display: inline-block;
+        position: absolute;
+      }
+    }
   }
+}
+
+
+.content-two-images-text {
+  margin: 100px 0;
+  div[class^="col-md"] {
+    overflow: hidden;
+  }
+  .text {
+    .green-link {
+      @include green-button(17px);
+    }
+  }
+}
+
+
+.grid-item {
+  width: 25%;
+  border: 1px solid red;
+}
+.grid-item--width2 {
+  width: 50%;
+  border: 1px solid green;
 }

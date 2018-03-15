@@ -1,1 +1,25 @@
-
+@mixin green-button($font-size) {
+  font-size: $font-size;
+  color: $font-color-secondary;
+  background-color: $background-tertiary;
+  padding: 7px 40px 7px 20px;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: "";
+    height: 12px;
+    width: 11px;
+    background-image: url("../../images/button-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    vertical-align: middle;
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    @media( max-width: 1200px ) {
+      font-size: 13px;
+    }
+  }
+}

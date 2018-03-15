@@ -9,19 +9,30 @@ footer {
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: 1500px) {
+      flex-direction: row;
+    }
     address {
       width: auto;
-      margin-right: auto;
-      align-self: flex-end;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      @media (min-width: 1500px) {
+        margin-right: auto;
+        align-self: flex-end;
+      }
       .footer-logo {
         height: 66px;
         width: 60px;
         background-image: url("../../images/logo-green.svg");
         background-repeat: no-repeat;
         background-position: center;
-        display: inline-block;
         bottom: 2px;
+        display: block;
+        margin: 0 auto;
+        @media (min-width: 1500px) {
+          display: inline-block;
+        }
       }
       p {
         display: inline-block;
@@ -43,8 +54,10 @@ footer {
       }
     }
     nav {
-        margin-left: auto;
-        align-self: flex-end;
+        @media (min-width: 1500px) {
+          margin-left: auto;
+          align-self: flex-end;
+        }
       ul {
         padding-left: 0;
         list-style-type: none;
