@@ -1,0 +1,92 @@
+// History
+.button-group {
+  border-top: 1px solid $border-quinary;
+  border-bottom: 1px solid $border-quinary;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 90px;
+  .button {
+    cursor: pointer;
+    border: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $font-color-primary;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    line-height: 22px;
+    text-decoration: none;
+    &.is-checked {
+      color: $font-color-quinary!important;
+    }
+  }
+}
+.element-item {
+  position: relative;
+  float: left;
+  width: 99%;
+  height: auto;
+  margin: .5%;
+  text-align: center;
+  @media (min-width: 768px) {
+    width: 49%;
+    margin: .5%;
+  }
+  @media (min-width: 992px) {
+    width: calc(97% / 3);
+    margin: .5%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .year {
+    color: $font-color-tertiary;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    &:after {
+      content: "";
+      height: 1px;
+      width: 55px;
+      border-bottom: 2px solid $border-quaternary;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+    }
+  }
+  p {
+    width: 65%;
+    display: block;
+    margin: 0 auto 50px;
+  }
+}
+.has-background {
+  background-color: $background-quaternary;
+}
+.has-border {
+  border: 1px solid $border-quaternary;
+  background-color: $background-primary;
+}
+
+
+.y1880 {
+ // border: 1px solid green;
+}
+.y1900  {
+  // border: 1px solid yellow;
+}
+.y1940 {
+  // border: 1px solid brown;
+}
+.y1990 {
+  // border: 1px solid black;
+}
+.y2000 {
+  // border: 1px solid red;
+}

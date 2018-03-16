@@ -51,36 +51,15 @@ $( window ).resize(function() {
 
 
 // history Isotope
-
-// quick search regex
-var qsRegex;
-var buttonFilter;
-var filterValue;
-var $selects = $('#form-ui select');
-var $checkboxes = $('#form-ui input');
-var filterCheckbox;
-
-
-
-// init Isotope
 var $grid = $('.grid').isotope({
-  itemSelector: '.element-item',
-  filter: function() {
-    var $this = $(this);
-    var buttonResult = buttonFilter ? $this.is(buttonFilter) : true;
-    var selectResult = filterValue ? $this.is(filterValue) : true;
-    return buttonResult && selectResult;
-  }
+  transitionDuration: 500
 });
-
-// BBUTTONS
+// filter items on button click
 $('#filters').on( 'click', 'button', function() {
-  buttonFilter = $( this ).attr('data-filter');
-  console.log(buttonFilter);
-  $grid.isotope();
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
 });
 
-// change is-checked class on buttons
 $('.button-group').each( function( i, buttonGroup ) {
   var $buttonGroup = $( buttonGroup );
   $buttonGroup.on( 'click', 'button', function() {
@@ -89,17 +68,15 @@ $('.button-group').each( function( i, buttonGroup ) {
   });
 });
 
-// debounce so filtering doesn't happen every millisecond
-function debounce( fn, threshold ) {
-  var timeout;
-  return function debounced() {
-    if ( timeout ) {
-      clearTimeout( timeout );
-    }
-    function delayed() {
-      fn();
-      timeout = null;
-    }
-    setTimeout( delayed, threshold || 100 );
-  };
+
+// Object Fit IE fallback
+if('objectFit' in document.documentElement.style === false) {
+  var container = document.getElementsByClassName('fit-image-box');
+  for(var i = 0; i < container.length; i++) {
+    var imageSource = container[i].querySelector('img').src;
+    container[i].querySelector('img').style.display = 'none';
+    container[i].style.backgroundSize = 'cover';
+    container[i].style.backgroundImage = 'url(' + imageSource + ')';
+    container[i].style.backgroundPosition = 'center center';
+  }
 }

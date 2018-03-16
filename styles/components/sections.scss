@@ -1,0 +1,22 @@
+.first-section {
+  position: relative;
+  top: -120px;
+  margin-bottom: -120px;
+  background-color: rgba(255,255,255,.8);
+  padding-top: 15px;
+  padding-bottom: 90px;
+  z-index: 10;
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+  h3:first-child {
+    margin-top: 30px;
+    @media (min-width: 768px) {
+
+    }
+  }
+  p:first-child {
+    margin-top: 30px;
+  }
+}

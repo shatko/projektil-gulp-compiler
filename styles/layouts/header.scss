@@ -327,3 +327,21 @@ header {
     }
   }
 }
+
+.header-image {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    height: 270px;
+    @media (min-width: 768px) {
+      height: 300px;
+    }
+    @media (min-width: 992px) {
+      height: 400px;
+    }
+    @media (min-width: 1200px) {
+      height: 540px;
+    }
+  }
+}
