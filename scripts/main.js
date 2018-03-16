@@ -80,3 +80,14 @@ if('objectFit' in document.documentElement.style === false) {
     container[i].style.backgroundPosition = 'center center';
   }
 }
+
+
+// tooltip stuff
+$('.tooltip-button-open').click(function(){
+  $('.tooltip-content').addClass('show-tooltip');
+  $('.tooltip-button-close').addClass('show-tooltip');
+});
+$('.tooltip-button-close').click(function(){
+  $('.tooltip-content').removeClass('show-tooltip');
+  $(this).removeClass('show-tooltip');
+});
